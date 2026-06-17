@@ -369,7 +369,7 @@ html[data-theme="light"] nav {
 
 /* Primary Button Hover (Sleek Outline Transition) */
 .btn-primary:hover,
-.btn-outline:hover  {
+.btn-outline:hover {
     background: transparent !important;
     color: var(--primary);
     border-color: var(--primary);
@@ -1407,7 +1407,9 @@ footer {
     }
 
     .hero-grid {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
+        display: flex;
+        flex-direction: column-reverse;
         gap: 3rem;
         text-align: center;
     }
@@ -1440,6 +1442,9 @@ footer {
         position: static;
         max-width: 100%;
         text-align: center;
+    }
+      .code-body {
+        text-align: start;
     }
 }
 
@@ -1479,6 +1484,9 @@ footer {
     .edu-card {
         max-width: 100%;
     }
+      .code-body {
+        text-align: start;
+    }
 }
 
 @media(max-width:600px) {
@@ -1500,7 +1508,16 @@ footer {
         grid-template-columns: 1fr;
         gap: 0;
     }
+
+    .code-body {
+        text-align: start;
+    }
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+    }
 }
+
 
 /* Reveal transition classes */
 .reveal {
